@@ -7,6 +7,8 @@ function init() {
   const landButton = document.getElementById("landing");
   const abortButton = document.getElementById("missionAbort");
 
+  
+
   // When the "Take off" button is clicked, the following should happen
   // A window confirm should let the user know "Confirm that the shuttle is ready for takeoff." 
   takeOffButton.addEventListener("click", function(event) {
@@ -17,6 +19,8 @@ function init() {
       // The flight status should change to "Shuttle in flight."
       document.getElementById("flightStatus").innerHTML = "Shuttle in Flight";
       console.log("spaceShuttle in Flight");
+      
+      // add shuttleFlight movement
 
       // The background color of the shuttle flight screen (id = "shuttleBackground") should change from green to blue.
       document.getElementById("shuttleBackground").style.backgroundColor = "blue";
@@ -81,6 +85,17 @@ function init() {
 
   // When the "Up", "Down", "Right", and "Left" buttons are clicked, the following should happen:
   // The rocket image should move 10 px in the direction of the button that was clicked.
+  let rocketIMG = document.getElementById("rocket");
+  const upButton = document.getElementById("up");
+  rocketIMG.style.position = "absolute";
+  rocketIMG.style.bottom = "0px"
+  rocketIMG.style.left = "0px"
+  // upButton.addEventListener("click", function(event) {
+    
+
+  //   console.log(rocketIMG)
+  // })
+
 }
 
 window.addEventListener("load", init);
